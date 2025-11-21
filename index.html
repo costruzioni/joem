@@ -1,4 +1,4 @@
-<html><head>
+the<html><head>
     <title>
         jo&em construzioni
       <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -39,11 +39,61 @@ img:hover {
         text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
     }
 }
+        .split-text-container {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    overflow: hidden;
+}
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+        
     </style>
 
     <body>
         <div class="neon-container">
     <h1 class="neon-text">`~JO&EM~`</h1>
+        </div>
+        <div class="split-text-container">
+    <span class="text-part left">CON</span>
+    <span class="text-part right">struzion</span>
         </div>
           <h2><marquee>benvenuti nella nostra pagine </marquee></h2>
 
@@ -60,6 +110,7 @@ img:hover {
             <img src="IMG_20251120_172314_164.jpg"alt="forest"style=width:150px"></a>
     </body>
 </html>
+
 
 
 
